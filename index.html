@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обо мне — счастливая домохозяйка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: url('https://images.unsplash.com/photo-1589924691995-400dc9ecc0af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        }
+
+        .subtitle {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.4);
+        }
+
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255,107,107,0.5);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            color: #4a7c59;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: #4a7c59;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #4a7c59;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .heart {
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            .subtitle { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>Привет! Я — счастливая домохозяйка</h1>
+            <p class="subtitle">Люблю свой дом, огород, животных и прогулки на свежем воздухе</p>
+            <a href="#about" class="btn">Узнать обо мне побольше</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <h2>Чем живу и чем дышу</h2>
+
+        <div class="about-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1589927986083-13a5e8c0b000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Огород">
+                <div class="card-content">
+                    <h3>Лето — это огород!</h3>
+                    <p>Каждое лето я с огромной радостью сажаю помидоры, огурцы, кабачки, зелень и цветы. Нет ничего вкуснее овощей, выращенных своими руками. Обожаю запах свежей земли и первые тёплые дни!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Собака">
+                <div class="card-content">
+                    <h3>Люблю животных всей душой</h3>
+                    <p>У меня дома всегда есть пушистые и пернатые друзья. Собаки, кошки, куры — все они часть нашей большой и тёплой семьи. Их любовь и преданность делают каждый день светлее.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Прогулка в лесу">
+                <div class="card-content">
+                    <h3>Гулять — моё всё</h3>
+                    <p>Свежий воздух, лес, поле, река — это моё место силы. Каждый день стараюсь выйти на прогулку, подышать, послушать птиц, насладиться природой. Это заряжает лучше любого кофе!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>С любовью и теплом &nbsp; <span class="heart">❤️</span> &nbsp; от простой счастливой женщины, которая обожает свою жизнь</p>
+    </footer>
+
+    <script>
+        // Плавная прокрутка при клике на кнопку
+        document.querySelector('.btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
